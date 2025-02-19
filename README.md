@@ -2,7 +2,10 @@
 
 This is a test project to verify that component bindings are displayed correctly.
 
-![](pict/win32.png)
+![](pict/win32_100.png)
+ 
+![](pict/win32_200.png)
+
 
 Lazarus 4.99 (rev main_4_99-887-g4c39c0d55f) FPC 3.3.1 x86_64-win64-win32/win64
 

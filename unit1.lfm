@@ -1,11 +1,11 @@
 object Form1: TForm1
   Left = 501
-  Height = 130
+  Height = 204
   Top = 286
-  Width = 371
+  Width = 482
   Caption = 'Form1'
-  ClientHeight = 130
-  ClientWidth = 371
+  ClientHeight = 204
+  ClientWidth = 482
   DesignTimePPI = 120
   LCLVersion = '4.99.0.0'
   OnCreate = FormCreate
@@ -15,42 +15,99 @@ object Form1: TForm1
     Left = 20
     Height = 28
     Top = 20
-    Width = 127
-    BorderSpacing.Left = 20
-    BorderSpacing.Top = 20
-    BorderSpacing.Bottom = 20
+    Width = 188
+    BorderSpacing.Left = 10
+    BorderSpacing.Top = 10
+    BorderSpacing.Around = 10
     TabOrder = 0
     Text = 'Edit1'
   end
   object ComboBox1: TComboBox
     AnchorSideLeft.Control = Owner
-    AnchorSideTop.Control = Edit1
+    AnchorSideTop.Control = Edit2
     AnchorSideTop.Side = asrBottom
     Left = 20
     Height = 28
-    Top = 68
-    Width = 125
-    BorderSpacing.Left = 20
+    Top = 106
+    Width = 188
+    BorderSpacing.Left = 10
+    BorderSpacing.Top = 10
+    BorderSpacing.Around = 10
     ItemHeight = 20
     TabOrder = 1
     Text = 'ComboBox1'
   end
   object Button1: TButton
-    Left = 192
-    Height = 31
+    AnchorSideLeft.Control = Edit1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Edit1
+    AnchorSideBottom.Control = Edit1
+    AnchorSideBottom.Side = asrBottom
+    Left = 218
+    Height = 28
     Top = 20
-    Width = 94
-    Caption = 'Button1'
+    Width = 240
+    Anchors = [akTop, akLeft, akBottom]
+    Caption = 'designtime anchoring'
     TabOrder = 2
   end
   object Button2: TButton
     AnchorSideLeft.Side = asrBottom
-    Left = 192
+    Left = 224
     Height = 31
-    Top = 68
-    Width = 94
+    Top = 55
+    Width = 240
     BorderSpacing.Left = 2
-    Caption = 'Button2'
+    Caption = 'runtime anchoring'
     TabOrder = 3
+  end
+  object Edit2: TEdit
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Edit1
+    AnchorSideTop.Side = asrBottom
+    Left = 20
+    Height = 28
+    Top = 58
+    Width = 188
+    BorderSpacing.Left = 10
+    BorderSpacing.Around = 10
+    TabOrder = 4
+    Text = 'Edit2'
+  end
+  object ComboBox2: TComboBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = ComboBox1
+    AnchorSideTop.Side = asrBottom
+    Left = 20
+    Height = 28
+    Top = 144
+    Width = 188
+    BorderSpacing.Left = 10
+    BorderSpacing.Around = 10
+    ItemHeight = 20
+    TabOrder = 5
+    Text = 'ComboBox2'
+  end
+  object Button3: TButton
+    AnchorSideLeft.Control = ComboBox1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = ComboBox1
+    AnchorSideBottom.Control = ComboBox1
+    AnchorSideBottom.Side = asrBottom
+    Left = 218
+    Height = 28
+    Top = 106
+    Width = 240
+    Anchors = [akTop, akLeft, akBottom]
+    Caption = 'designtime anchoring'
+    TabOrder = 6
+  end
+  object Button4: TButton
+    Left = 232
+    Height = 31
+    Top = 141
+    Width = 240
+    Caption = 'runtime anchoring'
+    TabOrder = 7
   end
 end

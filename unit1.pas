@@ -14,8 +14,12 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
     ComboBox1: TComboBox;
+    ComboBox2: TComboBox;
     Edit1: TEdit;
+    Edit2: TEdit;
     procedure FormCreate(Sender: TObject);
   private
 
@@ -34,36 +38,35 @@ implementation
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  with Button1 do
+  with Button2 do
   begin
     AnchorSideTop.Side:= asrTop;
-    AnchorSideTop.Control:= Edit1;
+    AnchorSideTop.Control:= Edit2;
     BorderSpacing.Top:= 0;
 
     AnchorSideBottom.Side:= asrBottom;
-    AnchorSideBottom.Control:= Edit1;
+    AnchorSideBottom.Control:= Edit2;
     BorderSpacing.Bottom:= 0;
 
-    AnchorSideLeft.Side:= asrRight;
-    AnchorSideLeft.Control:= Edit1;
-    BorderSpacing.Left:= 2;
+    AnchorSideLeft.Side:= asrBottom;
+    AnchorSideLeft.Control:= Edit2;
 
     Anchors:= Anchors + [akLeft, akTop, akBottom];
   end;
 
-  with Button2 do
+  with Button4 do
   begin
     AnchorSideTop.Side:= asrTop;
-    AnchorSideTop.Control:= ComboBox1;
+    AnchorSideTop.Control:= ComboBox2;
     BorderSpacing.Top:= 0;
 
     AnchorSideBottom.Side:= asrBottom;
-    AnchorSideBottom.Control:= ComboBox1;
+    AnchorSideBottom.Control:= ComboBox2;
     BorderSpacing.Bottom:= 0;
 
-    AnchorSideLeft.Side:= asrRight;
-    AnchorSideLeft.Control:= ComboBox1;
-    BorderSpacing.Left:= 2;
+    AnchorSideLeft.Side:= asrBottom;
+    AnchorSideLeft.Control:= ComboBox2;
+
 
     Anchors:= Anchors + [akLeft, akTop, akBottom];
   end;
