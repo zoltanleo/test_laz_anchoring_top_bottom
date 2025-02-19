@@ -11,7 +11,9 @@ Lazarus 4.99 (rev main_4_99-887-g4c39c0d55f) FPC 3.3.1 x86_64-win64-win32/win64
 
 ====
 
-![](pict/darwin_cocoa.png)
+![](pict/darwin_cocoa_100.png)
+
+![](pict/darwin_cocoa_200.png)
 
 Lazarus 4.99 (rev main_4_99-1066-g5bcc39179c) FPC 3.3.1 x86_64-darwin-cocoa
 
