@@ -51,7 +51,12 @@ begin
     AnchorSideLeft.Side:= asrBottom;
     AnchorSideLeft.Control:= Edit2;
 
+    {$IFDEF DARWIN}
+    Anchors:= Anchors + [akLeft, akTop] - [akBottom];
+    {$ELSE}
     Anchors:= Anchors + [akLeft, akTop, akBottom];
+    {$ENDIF}
+
   end;
 
   with Button4 do
@@ -68,7 +73,11 @@ begin
     AnchorSideLeft.Control:= ComboBox2;
 
 
+    {$IFDEF DARWIN}
+    Anchors:= Anchors + [akLeft, akTop] - [akBottom];
+    {$ELSE}
     Anchors:= Anchors + [akLeft, akTop, akBottom];
+    {$ENDIF}
   end;
 
 end;
